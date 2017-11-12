@@ -15,6 +15,7 @@
 </head>
 <body>
   <script type="text/javascript" src="./script/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="./script/bootstrap.min.js"></script>
   <script type="text/javascript" src="./script/slick.min.js"></script>
   <script type="text/javascript" src="./script/jquery.fancybox.min.js"></script>
   <script type="text/javascript" src="./script/my.js"></script>
@@ -119,7 +120,7 @@
                      <option value="xxl">XXL</option>
                     </select>
                       <div class="size-table">
-                        <a href="#">tabulka velikostí</a>
+                        <a href="#" data-toggle="modal" data-target="#modalSizeTable">tabulka velikostí</a>
                       </div>
                       <div class="clearer"> </div>
                     </div>
@@ -183,6 +184,49 @@
       <div class="copyright">&copy; 2010 Copyright BLAŽEK PRAHA a.s </div>
       <input type="text" placeholder="hledaný text" /></div>
   </footer>
+  <div class="modal fade" id="modalSizeTable" tabindex="-1" role="dialog" aria-labelledby="modalSizeTablelLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalSizeTableLabel">Tabulka velikostí</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table>
+            <tr>
+              <th>
+                Pro hobity
+              </th>
+              <td>
+                XS
+              </td>
+            </tr>
+            <tr>
+              <th>
+                Pro větší hobity
+              </th>
+              <td>
+                M
+              </td>
+            </tr>
+            <tr>
+              <th>
+                Pro největší hobity
+              </th>
+              <td>
+                XL
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Zavřít</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>

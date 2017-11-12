@@ -14,6 +14,11 @@
           border-radius: @radius;
 }
 
+.transition-color(@speed:200ms) {
+  -webkit-transition: color @speed ease;
+  transition: color @speed ease;
+}
+
 .arrow-hover(@image) {
   width:23px;
   height:23px;
@@ -47,7 +52,7 @@ ul.breadcrumbs {
     color:black;
   }
   li a {
-    transition: color 200ms ease;
+    .transition-color();
     text-decoration:none;
     color:#b6b6b6;
     &:hover {
@@ -123,7 +128,7 @@ ul.breadcrumbs {
         background-repeat: no-repeat;
         padding-left:18px;
         color:@links-grey;
-        transition: color 200ms ease;
+        .transition-color();
         &:hover {
           background-image: url(../img/nav-pdf-active.png);
           color:white;
@@ -142,7 +147,7 @@ ul.breadcrumbs {
         padding-left:12px;
         color:@links-grey;
         text-decoration:none;
-        transition: color 200ms ease;
+        .transition-color();
         &:hover {
           color:white;
           background: url(../img/nav-arrow-active.png);
@@ -297,7 +302,7 @@ ul.breadcrumbs {
           a {
             color:#c00237;
             text-decoration:none;
-            transition: color 400ms ease;
+            .transition-color(400ms);
             &:hover{
               color:darken(#c00237, 15%);
             }            
@@ -321,7 +326,7 @@ ul.breadcrumbs {
       }
     }
     .accessories-container {
-      flex: 1 0 0;
+      flex: 1 1 0;
       .accessories-block {
         max-width:100%;
         background-color:#f7f7f7;
@@ -401,7 +406,7 @@ footer{
       color:#a3a3a3;
       text-decoration:none;
       font-size:.7rem;
-      transition: color 200ms ease;
+      .transition-color();
       &:hover{
         text-decoration:none;
         color:lighten(#a3a3a3,30%);
