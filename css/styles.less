@@ -14,6 +14,17 @@
           border-radius: @radius;
 }
 
+.arrow-hover(@image) {
+  width:23px;
+  height:23px;
+  background-image: url("@{image-url}@{image}.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  &:hover {
+    background-image: url("@{image-url}@{image}2.png");
+  }  
+}
+
 body {
   background-color:#fdfdfd;
 }
@@ -105,12 +116,18 @@ ul.breadcrumbs {
       }
     }
     .nav-footer {
-      background: url(../img/nav-pdf.png);
-      background-position: left center;
-      background-repeat: no-repeat;
-      padding-left:18px;
       a{
         font-size:.7rem;
+        background: url(../img/nav-pdf.png);
+        background-position: left center;
+        background-repeat: no-repeat;
+        padding-left:18px;
+        color:@links-grey;
+        transition: color 200ms ease;
+        &:hover {
+          background-image: url(../img/nav-pdf-active.png);
+          color:white;
+        }
       }
     }
     ul {
@@ -285,17 +302,20 @@ ul.breadcrumbs {
               color:darken(#c00237, 15%);
             }            
           }
-          li:nth-child(1){
+          li:nth-child(1) a {
             .link-bg-image("howto-1.png", 20px);
           }
-          li:nth-child(2){
+          li:nth-child(2) a {
             .link-bg-image("howto-2.png", 20px);
           }
-          li:nth-child(3){
+          li:nth-child(3) a {
             .link-bg-image("howto-3.png", 20px);
           }
-          li:nth-child(4){
+          li:nth-child(4) a {
             .link-bg-image("howto-4.png", 20px);
+            &:hover{
+              .link-bg-image("howto-4-active.png", 20px);
+            }
           }
         }
       }
@@ -307,12 +327,21 @@ ul.breadcrumbs {
         background-color:#f7f7f7;
         .border-radius(10px);
         padding-top:12px;
+        padding-bottom:12px;
         font-size:.8rem;
         margin:0 auto;
         text-align: center;
-          img {
-            margin: 8px auto;
-          }
+        .up-arrow {
+          margin: 8px auto;
+          .arrow-hover(up);
+        }
+        .down-arrow {
+          .arrow-hover(down);
+          margin: 8px auto;
+        }
+        img {
+          margin: 8px auto;
+        }
       }
     }
   }
@@ -328,6 +357,14 @@ ul.breadcrumbs {
     span {
       display:block;
       margin-left:45px;
+    }
+    .left-arrow {
+      padding-right:20px;
+      .arrow-hover(left);
+    }
+    .right-arrow {
+      padding-left:20px;
+      .arrow-hover(right);
     }
     .similar-products-cont {
         display: flex;
@@ -354,6 +391,7 @@ footer{
   ul {
     float:left;
     list-style-type:none;
+    margin-top: 7px;
     li {
       display:inline-block;
       border-right: 1px solid #3b3b3b;
@@ -371,21 +409,40 @@ footer{
     }
     a.login {
       .link-bg-image("footer-login.png", 19px);
+      &:hover {
+        .link-bg-image("footer-login-active.png", 19px);
+      }
     }
     a.cart {
       .link-bg-image("footer-cart.png", 25px);
+      &:hover {
+        .link-bg-image("footer-cart-active.png", 25px);
+      }
     }
     a.favorites {
       .link-bg-image("footer-fav.png", 19px);
+      &:hover {
+        .link-bg-image("footer-fav-active.png", 19px);
+      }
     }
     a.newsletter {
       .link-bg-image("footer-newsletter.png", 23px);
+      &:hover {
+        .link-bg-image("footer-newsletter-active.png", 23px);
+      }
     }
-  }
+      
+    }
   .search {
     float:right;
+    font-size:.7rem;
+    div {
+      font-size:.6rem;
+      padding-right:10px;
+      padding-bottom:7px;
+    }
     input {
-      width:150px;
+      width:160px;
       height:25px;
       .border-radius(5px);
       margin-right:20px;

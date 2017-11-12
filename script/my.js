@@ -4,8 +4,8 @@
       centerMode: true,
       slidesToShow: 4,
       slidesToScroll: 5,
-      prevArrow: "<p class='slide-arrow'><img src='./img/left.png' width='23' /></p>",
-      nextArrow: "<p class='slide-arrow'><img src='./img/right.png' width='23' /></p>"
+      prevArrow: "<p class='slide-arrow left-arrow'>&nbsp;</p>",
+      nextArrow: "<p class='slide-arrow right-arrow'>&nbsp;</p>"
     });
     $('.accessories-slide').slick({
       infinite: true,
@@ -13,8 +13,8 @@
       slidesToShow: 2,
       slidesToScroll: 2,
       vertical: true,
-      prevArrow: "<img class='slide-arrow' src='./img/up.png' width='23' />",
-      nextArrow: "<img class='slide-arrow' src='./img/down.png' width='23' />"
+      prevArrow: "<p class='slide-arrow up-arrow'>&nbsp;</p>",
+      nextArrow: "<p class='slide-arrow down-arrow'>&nbsp;</p>"
     });
     $(".show-menu").click(function() {
       $(".navigation").slideToggle("slow", "linear");
