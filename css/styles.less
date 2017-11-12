@@ -1,0 +1,464 @@
+@links-grey: #6e6e6e;
+@image-url: "../img/"; 
+
+.link-bg-image(@image; @padding) {
+  background-image: url("@{image-url}@{image}");
+  background-position: left 60%;
+  background-repeat: no-repeat;
+  padding-left: @padding;
+}
+
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+
+body {
+  background-color:#fdfdfd;
+}
+
+ul.breadcrumbs {
+  padding-left:15px;;
+  margin-top:40px;
+  li {
+    display: inline;
+    font-size:.7rem;
+    background-image: url(../img/breadcrumb-arrow.png);
+    background-position: left 60%;
+    background-repeat: no-repeat;
+    padding-left:9px;
+  }
+  li:first-child {
+    background:none;
+  }
+  li:last-child a{
+    color:black;
+  }
+  li a {
+    transition: color 200ms ease;
+    text-decoration:none;
+    color:#b6b6b6;
+    &:hover {
+        color:black;
+    }
+  }
+}
+
+.show-menu {
+    max-width: 183px;
+    a {
+      display: block;
+      width:93%;
+      color:#333333;
+      font-size:.8rem;
+      text-decoration:none;
+    }
+    .arrow-down {
+      background: url(../img/nav-arrow1.png);
+      background-position: right center;
+      background-repeat: no-repeat;
+    }
+    .arrow-right {
+      background: url(../img/nav-arrow-right.png);
+      background-position: right center;
+      background-repeat: no-repeat;
+    }
+    border-bottom:1px solid #b6b6b6;
+    border-top:1px solid #b6b6b6;
+    padding:3px 0;
+    margin:20px 0;
+    .border-decoration {
+      border-top:1px solid #b6b6b6;
+      width: 100%;
+    }
+}
+
+.navigation {
+  max-width: 183px;
+  .border-radius(15px);
+  background: url(../img/nav-bg.png);
+  background-position: left top;
+  background-repeat: repeat;
+  padding-top:10px;
+  padding-left:15px;
+  padding-bottom:15px;
+    .nav-header, .nav-footer {
+      margin-right:15px;
+      a {
+        display:block;
+        color:white;
+        font-size:.8rem;
+        text-decoration:none;
+      }
+    }
+    .nav-header {
+      .arrow-down {
+        background: url(../img/nav-arrow-down.png);
+        background-position: right center;
+        background-repeat: no-repeat;
+      }
+      .arrow-right {
+        background: url(../img/nav-arrow-right2.png);
+        background-position: right center;
+        background-repeat: no-repeat;
+      }
+    }
+    .nav-footer {
+      background: url(../img/nav-pdf.png);
+      background-position: left center;
+      background-repeat: no-repeat;
+      padding-left:18px;
+      a{
+        font-size:.7rem;
+      }
+    }
+    ul {
+      margin-top:10px;
+      font-size:.7rem;
+      list-style-type:none;
+      padding-left:0px;
+      li a {
+        background: url(../img/nav-arrow.png);
+        background-position: left center;
+        background-repeat: no-repeat;
+        padding-left:12px;
+        color:@links-grey;
+        text-decoration:none;
+        transition: color 200ms ease;
+        &:hover {
+          color:white;
+          background: url(../img/nav-arrow-active.png);
+          background-position: left center;
+          background-repeat: no-repeat;
+        }
+      }
+      a.active{
+        background: url(../img/nav-arrow-active.png);
+        background-position: left center;
+        background-repeat: no-repeat;
+        color:white;
+        margin-left:3px;
+      }
+      li:last-child {
+        margin-right:10px;
+        padding-bottom:10px;
+        border-bottom:1px solid #333333;
+      }
+    }
+}
+.main {
+  width:85%;
+  margin:0px auto;
+  margin-left:0rem;
+  padding-bottom:60px;
+  .main-container {
+    width:95%;
+    background-color:white;
+    margin:0 auto;
+    border: 1px solid #d1d1d1;
+    .border-radius(10px);
+    .content-body {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      padding:0 15px;
+      margin:10px 0;
+    }
+    .content-header {
+      width:100%;
+      background-color:black;
+      color:white;
+      padding: 4px 10px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    .photo-container {
+      .gal-shortcuts {
+        max-width:100%;
+        margin-top: 3px;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    .text-container {
+      flex: 2 0 0;
+      .text-body {
+        padding: 0 20px;
+        font-size:.7rem;
+        table.product-description {
+          width: 100%;
+          margin-top:20px;
+          border-bottom: 1px solid #e4e4e4;
+          tr{
+            border-top: 1px solid #e4e4e4;
+            th {
+              font-weight: normal;
+            }
+            td {
+              color: #787878;
+              img {
+                cursor: pointer;
+              }
+            }
+          }
+        }
+        .price{
+          margin-top:15px;
+          width:100%;
+          font-size:1.2rem;
+          div {
+            display: inline-block;
+            margin-right:15px; 
+          }
+          .new{
+            color:#c00237;
+          }
+          .old {
+            color:#787878;
+            text-decoration: line-through;
+          }
+          span {
+            display:block;
+            color:#787878;
+            font-size:.6rem;
+          }
+        }
+        .cart {
+          margin-top: 15px;
+            select {
+              width:100%;
+              background: transparent;
+              appearance:none;
+              -moz-appearance:none; /* Firefox */
+              -webkit-appearance:none; /* Safari and Chrome */
+              background: url("../img/arrow-select.png") no-repeat 98% center;
+              padding: 5px 15px;
+              .border-radius(7px);
+              border: 1px solid #b6b6b6;
+              option:first-child {
+                color: red;
+              }
+            }
+            .size-table {
+              float:right;
+              text-align: right;
+              .link-bg-image("size-table.png", 15px);
+              margin-bottom:10px;
+              a {
+                text-decoration: none;
+                color:#787878;
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+            }
+          input.quantity {
+            .border-radius(7px);
+            text-align: right;
+            border: 1px solid #b6b6b6;
+            padding: 2px 8px;
+            padding-right:7px;
+            float:left;
+          }
+          input.add {
+            float:right;
+            color:white;
+            background-color: black;
+            .border-radius(12px);
+            padding: 2px 8px;
+            cursor: pointer;
+          }
+        }
+        ul.links {
+          width:100%;
+          list-style-type: none;
+          padding:0;
+          margin-top:30px;
+          padding-top:10px;
+          border-top:1px solid #e4e4e4;
+          a {
+            color:#c00237;
+            text-decoration:none;
+            transition: color 400ms ease;
+            &:hover{
+              color:darken(#c00237, 15%);
+            }            
+          }
+          li:nth-child(1){
+            .link-bg-image("howto-1.png", 20px);
+          }
+          li:nth-child(2){
+            .link-bg-image("howto-2.png", 20px);
+          }
+          li:nth-child(3){
+            .link-bg-image("howto-3.png", 20px);
+          }
+          li:nth-child(4){
+            .link-bg-image("howto-4.png", 20px);
+          }
+        }
+      }
+    }
+    .accessories-container {
+      flex: 1 0 0;
+      .accessories-block {
+        max-width:100%;
+        background-color:#f7f7f7;
+        .border-radius(10px);
+        padding-top:12px;
+        font-size:.8rem;
+        margin:0 auto;
+        text-align: center;
+          img {
+            margin: 8px auto;
+          }
+      }
+    }
+  }
+}
+.similar-products { 
+    width:95%;
+    border: 1px solid #d1d1d1;
+    .border-radius(10px);
+    margin:0 auto;
+    margin-top:20px;
+    padding:20px;
+    background-color:white;
+    span {
+      display:block;
+      margin-left:45px;
+    }
+    .similar-products-cont {
+        display: flex;
+        align-items: center;
+        margin-top:10px;
+        p {
+          flex: 1 1 auto;
+        }
+        .slide-arrow {
+          margin-right: 10px;
+          margin-left: 10px;
+        }
+    }
+}
+
+footer{
+  width:100%;
+  position:absolute;
+  left:0;
+  background-color:black;
+  background: url("../img/footer-bg.png") repeat-x top center black;
+  color:#a3a3a3;
+  padding-top:10px;
+  ul {
+    float:left;
+    list-style-type:none;
+    li {
+      display:inline-block;
+      border-right: 1px solid #3b3b3b;
+      padding:0px 15px;
+    }
+    a {
+      color:#a3a3a3;
+      text-decoration:none;
+      font-size:.7rem;
+      transition: color 200ms ease;
+      &:hover{
+        text-decoration:none;
+        color:lighten(#a3a3a3,30%);
+      }
+    }
+    a.login {
+      .link-bg-image("footer-login.png", 19px);
+    }
+    a.cart {
+      .link-bg-image("footer-cart.png", 25px);
+    }
+    a.favorites {
+      .link-bg-image("footer-fav.png", 19px);
+    }
+    a.newsletter {
+      .link-bg-image("footer-newsletter.png", 23px);
+    }
+  }
+  .search {
+    float:right;
+    input {
+      width:150px;
+      height:25px;
+      .border-radius(5px);
+      margin-right:20px;
+      font-size:.7rem;
+      padding-left:5px;
+      background: url("../img/search.png") no-repeat 98% center white;
+      border:1px solid #999999;
+    }
+  }
+}
+
+.clearer {
+  clear:both;
+}
+
+.slide-arrow {
+  cursor: pointer;
+}
+
+/* https://codepen.io/cbracco/pen/qzukg */
+
+/* Add this attribute to the element that needs a tooltip */
+[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-bottom: 5px;
+  margin-left: -80px;
+  padding: 4px;
+  width: 160px;
+  .border-radius(3px);
+  background-color: #000;
+  color: #fff;
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -5px;
+  width: 0;
+  border-top: 5px solid #000;
+  border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  opacity: 1;
+}

@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <title>Blažek - Obleky</title>
+  <meta name="description" content="">
+  <meta name="author" content="Marek Krčma">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="./css/bootstrap-reboot.min.css" />
+  <link rel="stylesheet" type="text/css" href="./css/bootstrap-grid.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/slick.css" />
+  <link rel="stylesheet" type="text/css" href="./css/styles.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/jquery.fancybox.min.css" />
+</head>
+<body>
+  <script type="text/javascript" src="./script/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="./script/slick.min.js"></script>
+  <script type="text/javascript" src="./script/jquery.fancybox.min.js"></script>
+  <script type="text/javascript" src="./script/my.js"></script>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-2">
+        <div class="logo"><a href="#"><img src="./img/logo.png" alt=""/></a></div>
+      </div>
+      <div class="col-sm-10">
+        <ul class="breadcrumbs">
+          <li><a href="#">úvodní strana</a></li>
+          <li><a href="#">katalog</a></li>
+          <li><a href="#">obleky</a></li>
+          <li><a href="#">detail produktu</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-2 col-8">
+        <div class="show-menu">
+          <div class="border-decoration"></div>
+          <a href="#" class="arrow-down">ZOBRAZIT MENU</a>
+        </div>
+        <div class="navigation">
+          <div class="nav-header"><a href="#" class="arrow-down">ZOBRAZIT KATALOG</a></div>
+          <div class="toggle-content">
+            <ul>
+              <li><a href="#">PLÁŠTĚ</a></li>
+              <li><a href="#">BUNDY</a></li>
+              <li><a class="active" href="#">OBLEKY</a></li>
+              <li><a href="#">OBLEKY - CASUAL</a></li>
+              <li><a href="#">SAKA</a></li>
+              <li><a href="#">KOŠILE</a></li>
+              <li><a href="#">KALHOTY</a></li>
+              <li><a href="#">OBUV</a></li>
+              <li><a href="#">OUTLET</a></li>
+            </ul>
+            <div class="nav-footer"><a href="#">KATALOG KE STAŽENÍ</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-10 col-12">
+        <div class="main">
+          <div class="main-container">
+            <div class="content-header">OBLEK</div>
+            <div class="content-body">
+              <div class="photo-container">
+                <a href="./img/gal/suit1.jpg" data-fancybox="gallery"><img src="./img/gal/suit1.jpg" class="img-fluid" alt="" /></a>
+                <div class="gal-shortcuts">
+                  <a href="./img/gal/suit2.jpg" data-fancybox="gallery"><img src="./img/gal/suit2.jpg" width="84" class="img-fluid" alt=""/></a>
+                  <a href="./img/gal/suit3.jpg" data-fancybox="gallery"><img src="./img/gal/suit3.jpg" width="84" class="img-fluid" alt=""/></a>
+                  <a href="./img/gal/suit4.jpg" data-fancybox="gallery"><img src="./img/gal/suit4.jpg" width="84" class="img-fluid" alt=""/></a>
+                </div>
+              </div>
+              <div class="text-container">
+                <div class="text-body">
+                  <div>Společenský oblek s atraktivním leskem. Směsový materiál vlny s elastanem zaručuje pohodlné nošení.</div>
+                  <table class="product-description">
+                    <tr>
+                      <th>Střih</th>
+                      <td>slim</td>
+                    </tr>
+                    <tr>
+                      <th>Linie</th>
+                      <td>classic</td>
+                    </tr>
+                    <tr>
+                      <th>Materiál</th>
+                      <td>vlna, elasten</td>
+                    </tr>
+                    <tr>
+                      <th>Údržba</th>
+                      <td class="symbol">
+                      <span data-tooltip="Per to na čtyřicet."><img src="./img/symbol-1.png" alt=""/></span>
+                      <span data-tooltip="Obsahuje radioaktivní materiál."><img src="./img/symbol-2.png" alt="" /></span>
+                      <span data-tooltip="Pozor! Pouští barvy."><img src="./img/symbol-3.png" alt="" /></span>
+                      <span data-tooltip="Nevhodné k jídlu."><img src="./img/symbol-4.png" alt="" /></span>
+                      <span data-tooltip="Jde to vyžehlit."><img src="./img/symbol-5.png" alt="" /></span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>Číslo artiklu</th>
+                      <td>13801210TOSA</td>
+                    </tr>
+                  </table>
+                  <div class="price">
+                    <div class="new">
+                      10 990 Kč
+                    </div>
+                    <div class="old">
+                      12 990 Kč
+                    </div>
+                    <span>výprodejová cena</span>
+                  </div>
+                  <div class="cart">
+                    <div>
+                      <select name="size">
+                    <option value="" disabled selected>Vyberte velikost</option>
+                     <option value="s">S</option>
+                     <option value="m">M</option>
+                     <option value="xl">XL</option>
+                     <option value="xxl">XXL</option>
+                    </select>
+                      <div class="size-table">
+                        <a href="#">tabulka velikostí</a>
+                      </div>
+                      <div class="clearer"> </div>
+                    </div>
+                    <input type="text" class="quantity" size="1" value="1" />&nbsp;ks
+                    <input type="button" class="add" value="PŘIDAT DO KOŠÍKU" />
+                  </div>
+                  <ul class="links">
+                    <li>
+                      <a href="#">jak nakupovat</a>
+                    </li>
+                    <li>
+                      <a href="#">odeslat odkaz emailem</a>
+                    </li>
+                    <li>
+                      <a href="#">stáhnout informace v PDF</a>
+                    </li>
+                    <li>
+                      <a href="#">přidat do oblíbených produktů</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="accessories-container">
+                <div class="accessories-block">
+                  <span>DOPLNIT OUTFIT</span>
+                  <div class="accessories-slide">
+                    <a href="./img/gal/acc-1.jpg" data-fancybox="gallery3"><img src="./img/gal/acc-1.jpg" width="113" alt="" class="img-fluid"/></a>
+                    <a href="./img/gal/acc-2.jpg" data-fancybox="gallery3"><img src="./img/gal/acc-2.jpg" width="113" alt="" class="img-fluid"/></a>
+                    <a href="./img/gal/acc-3.jpg" data-fancybox="gallery3"><img src="./img/gal/acc-3.jpg" width="113" alt="" class="img-fluid"/></a>
+                    <a href="./img/gal/acc-1.jpg" data-fancybox="gallery3"><img src="./img/gal/acc-1.jpg" width="113" alt="" class="img-fluid"/></a>
+                    <a href="./img/gal/acc-2.jpg" data-fancybox="gallery3"><img src="./img/gal/acc-2.jpg" width="113" alt="" class="img-fluid"/></a>
+                    <a href="./img/gal/acc-3.jpg" data-fancybox="gallery3"><img src="./img/gal/acc-3.jpg" width="113" alt="" class="img-fluid"/></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="similar-products">
+            <span>PODOBNÉ PRODUKTY</span>
+            <div class="similar-products-cont">
+              <p><a href="./img/gal/similar-1.jpg" data-fancybox="gallery2"><img src="./img/gal/similar-1.jpg" width="113" alt="" class="img-fluid"/></a></p>
+              <p><a href="./img/gal/similar-2.jpg" data-fancybox="gallery2"><img src="./img/gal/similar-2.jpg" width="113" alt="" class="img-fluid"/></a></p>
+              <p><a href="./img/gal/similar-3.jpg" data-fancybox="gallery2"><img src="./img/gal/similar-3.jpg" width="113" alt="" class="img-fluid"/></a></p>
+              <p><a href="./img/gal/similar-4.jpg" data-fancybox="gallery2"><img src="./img/gal/similar-4.jpg" width="113" alt="" class="img-fluid"/></a></p>
+              <p><a href="./img/gal/similar-5.jpg" data-fancybox="gallery2"><img src="./img/gal/similar-5.jpg" width="113" alt="" class="img-fluid"/></a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <ul>
+      <li><a href="#">CZ</a></li>
+      <li><a href="#" class="login">PŘIHLÁŠENÍ</a></li>
+      <li><a href="#" class="cart">KOŠÍK: 0 KČ</a></li>
+      <li><a href="#" class="favorites">OBLÍBENÉ: 5 KS</a></li>
+      <li><a href="#" class="newsletter">NEWSLETTER</a></li>
+    </ul>
+    <div class="search"><input type="text" placeholder="hledaný text" /></div>
+  </footer>
+</body>
+
+</html>
